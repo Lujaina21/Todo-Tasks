@@ -1,0 +1,51 @@
+/** Add Button */
+.add-btn {
+  margin-left: 12px;
+  padding: 8px 16px;
+  font-size: 16px;
+  position: relative;
+}
+
+.add-btn .add-btn-txt {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.add-btn .fa-check {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* **Hover Effect */
+.add-btn:hover .add-btn-txt {
+  opacity: 0;
+}
+.add-btn:hover .fa-check {
+  opacity: 1;
+}
+
+.fa-trash-can:hover {
+  animation: vibrate 1s infinite ease-in-out;
+  transform: scale(1.4);
+}
+@keyframes vibrate {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  75% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
